@@ -1,0 +1,153 @@
+/* street view */
+html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+      }
+      #street-view {
+        height: 90%;
+        position: fixed;
+        z-index: 1;
+      }
+      #stack-top-right-center{
+        float: right;
+      }
+    /* align the artwork on top of street view*/
+      #art-sample {
+        position: absolute;
+        top: 20%;
+        left: 780px;
+        z-index: 99;
+        height: 50%;
+        width: 50%;
+        display: none;
+      }
+
+      #loci-buttons{
+        position: absolute;
+        top: 20%;
+        left: 95%;
+        z-index:99;
+        display: block;
+      }
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #000;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Helvetica Neue
+}
+
+/* Style the Project Title Header */
+.project-header a{
+  float: left;
+  color: #000;
+  text-align: center;
+  padding: 10px  30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Helvetica Neue;
+  font-weight: bold;
+}
+
+/* body-content */
+.body-content {
+  float: center;
+  color: #000;
+  text-align: center;
+  padding: 75px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Helvetica Neue;
+}
+
+/*<div class="stack-top-right-center">
+            <button class="weather-btn"></button>   
+        </div>*/
+.sound-btn {
+  background-image: url(/asset/buttons/new/music.svg); 
+  background-color: transparent;
+  background-repeat: no-repeat;
+  /*background-position: center center;*/
+  border: 1px; /* Remove borders */
+  padding: 40px 30px; /* Some padding */ 
+}
+
+.art-btn {
+  background-image: url(/asset/buttons/new/art.svg); 
+  background-color: transparent;
+  background-repeat: no-repeat;
+  /*background-position: center center;*/
+  border: 1px; /* Remove borders */
+  padding: 45px 30px; /* Some padding */
+}
+
+.smell-btn {
+  background-image: url(/asset/buttons/new/smell.png); 
+  background-color: transparent;
+  background-repeat: no-repeat;
+  /*background-position: center center;*/
+  border: 1px; /* Remove borders */
+  padding: 30px 30px; /* Some padding */
+}
+
+#smellbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 20%;
+  font-size: 17px;
+  font-family: Helvetica Neue;
+}
+
+#smellbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.1s;
+  /*animation: fadein 0.5s, fadeout 0.5s 2.5s;*/
+}
+
+#smellbar.hide {
+  visibility: hidden;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>photo</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="43" height="43" rx="21.5"></rect>
+        <filter x="-36.0%" y="-33.7%" width="172.1%" height="172.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="0.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M18,12 L16.17,14 L13,14 C11.9,14 11,14.9 11,16 L11,28 C11,29.1 11.9,30 13,30 L29,30 C30.1,30 31,29.1 31,28 L31,16 C31,14.9 30.1,14 29,14 L25.83,14 L24,12 L18,12 L18,12 Z M21,17 C23.76,17 26,19.24 26,22 C26,24.76 23.76,27 21,27 C18.24,27 16,24.76 16,22 C16,19.24 18.24,17 21,17 Z M21,18.8 C19.2326888,18.8 17.8,20.2326888 17.8,22 C17.8,23.7673112 19.2326888,25.2 21,25.2 C22.7673112,25.2 24.2,23.7673112 24.2,22 C24.2,20.2326888 22.7673112,18.8 21,18.8 Z" id="path-4"></path>
+    </defs>
+    <g id="photo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Photo-Copy" transform="translate(7.000000, 7.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Surface-Copy-4">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use fill="#ECECEC" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <mask id="mask-5" fill="white">
+                <use xlink:href="#path-4"></use>
+            </mask>
+            <g id="Icon" fill-rule="nonzero"></g>
+            <rect id="↳-🎨-Color" fill="#222222" mask="url(#mask-5)" x="9" y="9" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

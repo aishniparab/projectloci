@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>art</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="43" height="43" rx="21.5"></rect>
+        <filter x="-36.0%" y="-33.7%" width="172.1%" height="172.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="0.5" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M22,12 C17.03,12 13,16.03 13,21 C13,25.97 17.03,30 22,30 C22.83,30 23.5,29.33 23.5,28.5 C23.5,28.11 23.35,27.76 23.11,27.49 C22.88,27.23 22.73,26.88 22.73,26.5 C22.73,25.67 23.4,25 24.23,25 L26,25 C28.76,25 31,22.76 31,20 C31,15.58 26.97,12 22,12 L22,12 Z M16.5,21 C15.67,21 15,20.33 15,19.5 C15,18.67 15.67,18 16.5,18 C17.33,18 18,18.67 18,19.5 C18,20.33 17.33,21 16.5,21 L16.5,21 Z M19.5,17 C18.67,17 18,16.33 18,15.5 C18,14.67 18.67,14 19.5,14 C20.33,14 21,14.67 21,15.5 C21,16.33 20.33,17 19.5,17 L19.5,17 Z M24.5,17 C23.67,17 23,16.33 23,15.5 C23,14.67 23.67,14 24.5,14 C25.33,14 26,14.67 26,15.5 C26,16.33 25.33,17 24.5,17 L24.5,17 Z M27.5,21 C26.67,21 26,20.33 26,19.5 C26,18.67 26.67,18 27.5,18 C28.33,18 29,18.67 29,19.5 C29,20.33 28.33,21 27.5,21 L27.5,21 Z" id="path-4"></path>
+    </defs>
+    <g id="art" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Art-Copy" transform="translate(7.000000, 7.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Surface">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use fill="#ECECEC" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <mask id="mask-5" fill="white">
+                <use xlink:href="#path-4"></use>
+            </mask>
+            <g id="Icon" fill-rule="nonzero"></g>
+            <rect id="↳-🎨-Color" fill="#080808" mask="url(#mask-5)" x="10" y="9" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

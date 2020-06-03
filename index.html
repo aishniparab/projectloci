@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project Loci</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   <!-- top navigation bar -->
+    <div class="project-header"><a href="index.html">Project Loci</a></div>
+    <div class="topnav">
+     <a href="about.html">About</a>
+     <!--<a href="guide.html">How It Works</a>-->
+    </div>
+   
+    <!-- google street view -->
+    <div id="street-view"></div>
+    
+    <!-- load source files into div elements -->
+    <audio id="myAudio" src="/asset/sounds/dialogue.m4a" type="audio"></audio>
+        
+    <div id="art-sample" class="toggle-art"><img src="/asset/artwork/IMG_4327.JPG" height="75%"></img></div>
+    
+    <div id="smellbar">Fries, Dried Fish, Coal</div>
+    
+    <!-- toggle buttons for ambient experience -->
+    <div id="loci-buttons">
+        <button class="sound-btn" onClick="togglePlay()" type="button"></button>   
+        
+        <button class="art-btn" onClick="displayArt()" type="button">
+        </button>   
+        
+        <button class="smell-btn" onClick="popSmells()" type="button"></button>
+    </div>
+    
+    <!-- javascript source files -->
+    <script src="src/buttons.js"></script>
+    
+    <script src="src/init-street-view.js"></script>
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsB_n6wdD24K7g16nc3_kRqm2EzspoVKk&callback=initialize">
+    </script>
+  
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project Loci</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   <div class="project-header"><a href="index.html">Project Loci</a></div>
+    <div class="topnav">
+     <a href="about.html">About</a>
+     <!--<a href="guide.html">How It Works</a>
+     <a href="side-view.html">Toggle View</a>-->
+    </div>
+    
+
+    <div id="map"></div>
+    <div id="pano"></div>
+    <script>
+
+      function initialize() {
+        //var fenway = {lat: 42.345573, lng: -71.098326};
+        var place_loc = {lat: 6.5294059, lng: 3.3929774};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: place_loc,
+          zoom: 14
+        });
+          
+
+          
+        var artCircle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: {lat: 42.345573, lng: -71.098326},
+            radius: 100
+          });
+        
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('pano'), {
+              position: place_loc,
+              pov: {
+                heading: 34,
+                pitch: 10
+              }
+            });
+        map.setStreetView(panorama);
+          
+    
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsB_n6wdD24K7g16nc3_kRqm2EzspoVKk&callback=initialize">
+    </script>
+  </body>
+</html>
