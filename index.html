@@ -17,7 +17,8 @@
     <div id="street-view"></div>
     
     <!-- load source files into div elements -->
-        
+    <audio id="myAudio" src="{{ site.baseurl }}/asset/sounds/dialogue.m4a" type="audio"></audio>
+
     <div id="art-sample" class="toggle-art"><img src="{{ site.baseurl }}/asset/artwork/IMG_4327.JPG" height="75%"></img></div>
     
     <div id="smellbar">Fries, Dried Fish, Coal</div>
@@ -33,8 +34,37 @@
     </div>
     
     <!-- javascript source files -->
-    <script src="src/buttons.js"></script>
-    
+
+    // Toggle Sounds
+    var x = document.getElementById("myAudio");
+
+    function togglePlay() {
+        return myAudio.paused ? myAudio.play() : myAudio.pause();
+    };
+
+    // Toggle Art
+    function displayArt() {
+        var art = document.getElementById("art-sample");
+        //show
+        if (art.style.display === "none") {
+            art.style.display = "block";
+        } else {
+            art.style.display = "none";
+        }
+    }
+
+    // Toggle Smell Tags
+    var isShowing=false;
+    function popSmells(){
+        var smells = document.getElementById("smellbar");
+        if (isShowing){
+            smells.className = "";    
+            isShowing=false;
+        } else{
+            smells.className = "show";
+            isShowing=true;
+        }
+    }    
     <script src="src/init-street-view.js"></script>
     <script async defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsB_n6wdD24K7g16nc3_kRqm2EzspoVKk&callback=initialize">
